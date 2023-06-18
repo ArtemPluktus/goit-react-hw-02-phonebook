@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './Phonebook.module.css';
 
 export const ContactForm = ({
@@ -38,4 +39,12 @@ export const ContactForm = ({
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  saveContact: PropTypes.func.isRequired,
+  handleInputNameChange: PropTypes.func.isRequired,
+  handleInputNumberChange: PropTypes.func.isRequired,
 };

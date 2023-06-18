@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './Phonebook.module.css';
 
 export const Filter = ({ filter, listFilter }) => {
@@ -12,4 +13,9 @@ export const Filter = ({ filter, listFilter }) => {
       />
     </label>
   );
+};
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  listFilter: PropTypes.func.isRequired,
 };

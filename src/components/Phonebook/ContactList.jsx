@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './Phonebook.module.css';
 
 export const ContactList = ({ filteredContacts, deleteContact }) => {
@@ -17,4 +18,9 @@ export const ContactList = ({ filteredContacts, deleteContact }) => {
       ))}
     </ul>
   );
+};
+
+ContactList.propTypes = {
+  filteredContacts: PropTypes.array.isRequired,
+  deleteContact: PropTypes.func.isRequired,
 };
